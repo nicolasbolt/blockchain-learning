@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "course_items",
+  "info": {
+    "singularName": "course-item",
+    "pluralName": "course-items",
+    "displayName": "Course Item",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "date_posted": {
+      "type": "date"
+    },
+    "course": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::course.course",
+      "inversedBy": "course_items"
+    },
+    "ordinal": {
+      "type": "integer"
+    },
+    "slug": {
+      "type": "string"
+    }
+  }
+}
